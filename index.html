@@ -10,7 +10,8 @@
 </head>
 <body>
 
-    <header>
+    <!-- CAPA DO TOPO (CORRIGIDA COM CORES DO CAMPO) -->
+    <header class="main-cover">
         <div class="header-overlay"></div>
         <div class="header-content">
             <h1><i class="fa-solid fa-school-flag"></i> Colégio Estadual do Campo Castelo Branco</h1>
@@ -20,83 +21,85 @@
     </header>
 
     <main class="container">
-        <section class="intro">
+        
+        <!-- BLOCO 1: INTRODUÇÃO E QUEM SOMOS -->
+        <section class="block-section intro-block">
             <h2><i class="fa-solid fa-star text-gradient"></i> Nossa Rotina no Tempo Integral</h2>
-            <p>Conheça as atividades práticas, dinâmicas e o espírito empreendedor que movem nossa escola.</p>
+            <p>Unimos o aprendizado prático da sala de aula com atividades físicas, culturais e o espírito empreendedor do cooperativismo do campo.</p>
         </section>
 
-        <!-- Botões de Navegação Super Coloridos -->
-        <div class="tabs">
-            <button class="tab-btn btn-terca active" onclick="openTab(event, 'terca')">
-                <i class="fa-solid fa-calendar-day"></i> Terça-Feira
-            </button>
-            <button class="tab-btn btn-quinta" onclick="openTab(event, 'quinta')">
-                <i class="fa-solid fa-calendar-check"></i> Quinta-Feira
-            </button>
-            <button class="tab-btn btn-cooperativa" onclick="openTab(event, 'cooperativa')">
-                <i class="fa-solid fa-handshake-angle"></i> CooperCastelo
-            </button>
-        </div>
-
-        <!-- Conteúdo: Terça-Feira -->
-        <div id="terca" class="tab-content active border-terca">
-            <div class="content-header">
-                <h3><i class="fa-solid fa-circle-play color-terca"></i> Terça-Feira: Esporte & Cultura</h3>
-                <p>Nossa turma se divide em dois grupos dinâmicos para aproveitar o melhor de dois mundos:</p>
+        <!-- BLOCO 2: NOSSA COOPERATIVA (DESTAQUE PRINCIPAL) -->
+        <section class="block-section cooperativa-main-block">
+            <div class="block-header">
+                <h3><i class="fa-solid fa-seedling color-cooperativa"></i> 🌱 CooperCastelo</h3>
+                <p>Nossa cooperativa oficial, orgulho da nossa escola! Aqui, <strong>100% dos alunos do Ensino Médio (do 9º ao 3º ano)</strong> são membros e cooperados ativos.</p>
             </div>
-            <div class="grid">
-                <div class="card card-futsal">
-                    <div class="card-icon"><i class="fa-solid fa-soccer-ball"></i></div>
-                    <h4>⚽ Futsal</h4>
-                    <p>Prática esportiva focada em saúde, agilidade, respeito mútuo e forte trabalho em equipe na quadra.</p>
-                </div>
-                <div class="card card-cinema">
-                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h4>🎬 Cinema</h4>
-                    <p>Exibição de filmes, debates enriquecedores, ampliação cultural e desenvolvimento do senso crítico.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conteúdo: Quinta-Feira -->
-        <div id="quinta" class="tab-content border-quinta">
-            <div class="content-header">
-                <h3><i class="fa-solid fa-lightbulb color-quinta"></i> Quinta-Feira: Dia de Cooperativismo</h3>
-                <p>O dia em que a teoria ganha vida através da liderança, organização e cooperação prática.</p>
-            </div>
-            <div class="card card-quinta-full">
-                <div class="card-icon"><i class="fa-solid fa-people-gear"></i></div>
-                <h4>🤝 Aprendizado Prático e Autonomia</h4>
-                <p>Unimos os conhecimentos da sala de aula com a gestão real de um negócio coletivo, preparando todos os alunos para o futuro.</p>
-            </div>
-        </div>
-
-        <!-- Conteúdo: Cooperativa -->
-        <div id="cooperativa" class="tab-content border-cooperativa">
-            <div class="content-header">
-                <h3><i class="fa-solid fa-seedling color-cooperativa"></i> CooperCastelo</h3>
-                <p>Nossa cooperativa oficial. Aqui, 100% dos alunos do Ensino Médio (do 9º ao 3º ano) são membros e cooperados ativos!</p>
-            </div>
+            
             <div class="grid">
                 <div class="card card-sabao">
                     <div class="card-icon"><i class="fa-solid fa-soap"></i></div>
                     <h4>🧼 Produção de Sabão</h4>
-                    <p>Fabricamos sabão artesanal sustentável. Reutilizamos materiais, cuidamos do meio ambiente e aplicamos conceitos reais de química.</p>
+                    <p>Fabricamos sabão artesanal sustentável. Reutilizamos óleos e materiais, protegendo o meio ambiente e aplicando conceitos de química na prática.</p>
                 </div>
                 <div class="card card-vendas">
                     <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
-                    <h4>💼 Comercialização e Gestão</h4>
-                    <p>Cuidamos das finanças, divulgamos as vendas e administramos os recursos de forma justa, gerando aprendizado de negócios.</p>
+                    <h4>💼 Comercialização</h4>
+                    <p>Organizamos os pontos de venda e administramos os lucros de forma justa, aprendendo finanças, liderança e negócios reais.</p>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- BLOCO 3: CRONOGRAMA DE ATIVIDADES SEMANAIS -->
+        <section class="block-section schedule-block">
+            <div class="block-header">
+                <h3><i class="fa-solid fa-calendar-days color-terca"></i> 📅 Atividades Semanais</h3>
+                <p>Veja como dividimos nossa rotina prática e dinâmica durante as tardes da semana:</p>
+            </div>
+
+            <!-- Botões das Abas de Dias -->
+            <div class="tabs">
+                <button class="tab-btn btn-terca active" onclick="openTab(event, 'terca')">
+                    <i class="fa-solid fa-calendar-day"></i> Terça-Feira: Grupos Rotativos
+                </button>
+                <button class="tab-btn btn-quinta" onclick="openTab(event, 'quinta')">
+                    <i class="fa-solid fa-calendar-check"></i> Quinta-Feira: Dia de Gestão
+                </button>
+            </div>
+
+            <!-- Conteúdo de Terça -->
+            <div id="terca" class="tab-content active border-terca">
+                <p class="tab-intro">Nas terças-feiras, os alunos dividem-se em <strong>dois grupos rotativos</strong> para aproveitar as oficinas:</p>
+                <div class="grid">
+                    <div class="card card-futsal">
+                        <div class="card-icon"><i class="fa-solid fa-soccer-ball"></i></div>
+                        <h4>⚽ Futsal</h4>
+                        <p>Prática esportiva focada na saúde, agilidade, respeito mútuo e forte trabalho em equipe na quadra esportiva.</p>
+                    </div>
+                    <div class="card card-cinema">
+                        <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                        <h4>🎬 Cinema</h4>
+                        <p>Exibição de filmes educativos, debates enriquecedores, ampliação de cultura e desenvolvimento do senso crítico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo de Quinta -->
+            <div id="quinta" class="tab-content border-quinta">
+                <div class="card card-quinta-full">
+                    <div class="card-icon"><i class="fa-solid fa-people-gear"></i></div>
+                    <h4>🤝 Dia de Cooperativismo na Prática</h4>
+                    <p>As quintas são reservadas exclusivamente para os trabalhos da <strong>CooperCastelo</strong>. É o momento de organizar reuniões, planejar as metas da cooperativa e colocar a mão na massa para fazer o projeto crescer.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
-        <p><i class="fa-solid fa-copyright"></i> 2026 <span>CooperCastelo</span> & Colégio Castelo Branco. Feito com orgulho pelos alunos.</p>
+        <p><i class="fa-solid fa-copyright"></i> 2026 <span>CooperCastelo</span> — C.E. do Campo Castelo Branco. Feito com orgulho pela nossa comunidade escolar.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
