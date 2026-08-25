@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Integral - C.E. do Campo Castelo Branco</title>
+    <!-- Ícones Modernos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1><i class="fa-solid fa-school-flag"></i> Colégio Estadual do Campo Castelo Branco</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Vista Alegre — Coronel Vivida, PR</p>
+            <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Ensino Médio Integral (9º ao 3º Ano)</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2><i class="fa-solid fa-star text-gradient"></i> Nossa Rotina no Tempo Integral</h2>
+            <p>Conheça as atividades práticas, dinâmicas e o espírito empreendedor que movem nossa escola.</p>
+        </section>
+
+        <!-- Botões de Navegação Super Coloridos -->
+        <div class="tabs">
+            <button class="tab-btn btn-terca active" onclick="openTab(event, 'terca')">
+                <i class="fa-solid fa-calendar-day"></i> Terça-Feira
+            </button>
+            <button class="tab-btn btn-quinta" onclick="openTab(event, 'quinta')">
+                <i class="fa-solid fa-calendar-check"></i> Quinta-Feira
+            </button>
+            <button class="tab-btn btn-cooperativa" onclick="openTab(event, 'cooperativa')">
+                <i class="fa-solid fa-handshake-angle"></i> CooperCastelo
+            </button>
+        </div>
+
+        <!-- Conteúdo: Terça-Feira -->
+        <div id="terca" class="tab-content active border-terca">
+            <div class="content-header">
+                <h3><i class="fa-solid fa-circle-play color-terca"></i> Terça-Feira: Esporte & Cultura</h3>
+                <p>Nossa turma se divide em dois grupos dinâmicos para aproveitar o melhor de dois mundos:</p>
+            </div>
+            <div class="grid">
+                <div class="card card-futsal">
+                    <div class="card-icon"><i class="fa-solid fa-soccer-ball"></i></div>
+                    <h4>⚽ Futsal</h4>
+                    <p>Prática esportiva focada em saúde, agilidade, respeito mútuo e forte trabalho em equipe na quadra.</p>
+                </div>
+                <div class="card card-cinema">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h4>🎬 Cinema</h4>
+                    <p>Exibição de filmes, debates enriquecedores, ampliação cultural e desenvolvimento do senso crítico.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo: Quinta-Feira -->
+        <div id="quinta" class="tab-content border-quinta">
+            <div class="content-header">
+                <h3><i class="fa-solid fa-lightbulb color-quinta"></i> Quinta-Feira: Dia de Cooperativismo</h3>
+                <p>O dia em que a teoria ganha vida através da liderança, organização e cooperação prática.</p>
+            </div>
+            <div class="card card-quinta-full">
+                <div class="card-icon"><i class="fa-solid fa-people-gear"></i></div>
+                <h4>🤝 Aprendizado Prático e Autonomia</h4>
+                <p>Unimos os conhecimentos da sala de aula com a gestão real de um negócio coletivo, preparando todos os alunos para o futuro.</p>
+            </div>
+        </div>
+
+        <!-- Conteúdo: Cooperativa -->
+        <div id="cooperativa" class="tab-content border-cooperativa">
+            <div class="content-header">
+                <h3><i class="fa-solid fa-seedling color-cooperativa"></i> CooperCastelo</h3>
+                <p>Nossa cooperativa oficial. Aqui, 100% dos alunos do Ensino Médio (do 9º ao 3º ano) são membros e cooperados ativos!</p>
+            </div>
+            <div class="grid">
+                <div class="card card-sabao">
+                    <div class="card-icon"><i class="fa-solid fa-soap"></i></div>
+                    <h4>🧼 Produção de Sabão</h4>
+                    <p>Fabricamos sabão artesanal sustentável. Reutilizamos materiais, cuidamos do meio ambiente e aplicamos conceitos reais de química.</p>
+                </div>
+                <div class="card card-vendas">
+                    <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h4>💼 Comercialização e Gestão</h4>
+                    <p>Cuidamos das finanças, divulgamos as vendas e administramos os recursos de forma justa, gerando aprendizado de negócios.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><i class="fa-solid fa-copyright"></i> 2026 <span>CooperCastelo</span> & Colégio Castelo Branco. Feito com orgulho pelos alunos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
