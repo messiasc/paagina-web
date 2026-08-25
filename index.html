@@ -4,91 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempo Integral - C.E. do Campo Castelo Branco</title>
-    <!-- Ícones Modernos -->
+    <!-- Ícones e Fontes Digitais -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CAPA DO TOPO (CORRIGIDA COM CORES DO CAMPO) -->
-    <header class="main-cover">
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1><i class="fa-solid fa-school-flag"></i> Colégio Estadual do Campo Castelo Branco</h1>
-            <p><i class="fa-solid fa-location-dot"></i> Vista Alegre — Coronel Vivida, PR</p>
-            <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Ensino Médio Integral (9º ao 3º Ano)</span>
+    <!-- CAPA PRINCIPAL (Design de Natureza e Campo) -->
+    <header class="main-capa">
+        <div class="capa-grid">
+            <div class="capa-textos">
+                <span class="badge-integral"><i class="fa-solid fa-clock"></i> Ensino Médio em Tempo Integral</span>
+                <h1>Colégio Estadual do Campo Castelo Branco</h1>
+                <p class="subtitulo">Formando jovens cooperados, autônomos e preparados para o futuro da nossa comunidade.</p>
+                
+                <!-- Bloco de Localização Oficial Integrado na Capa -->
+                <div class="location-box">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div>
+                        <strong>Endereço Oficial:</strong>
+                        <span>Rua Prefeito Frederico Berger, S/N — Distrito de Vista Alegre</span>
+                        <small>Coronel Vivida - PR | CEP 85550-000 (Zona Rural)</small>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
+    <main class="main-container">
         
-        <!-- BLOCO 1: INTRODUÇÃO E QUEM SOMOS -->
-        <section class="block-section intro-block">
-            <h2><i class="fa-solid fa-star text-gradient"></i> Nossa Rotina no Tempo Integral</h2>
-            <p>Unimos o aprendizado prático da sala de aula com atividades físicas, culturais e o espírito empreendedor do cooperativismo do campo.</p>
+        <!-- BLOCO 1: SOBRE O TEMPO INTEGRAL -->
+        <section class="bloco-info">
+            <div class="bloco-card-intro">
+                <h2><i class="fa-solid fa-graduation-cap"></i> A Força do Ensino Integral</h2>
+                <p>Nossa proposta pedagógica expande os limites da sala de aula tradicional. Aliamos o conhecimento científico a oficinas práticas que desenvolvem a cultura, a saúde, o pensamento crítico e o empreendedorismo social diretamente no campo.</p>
+            </div>
         </section>
 
-        <!-- BLOCO 2: NOSSA COOPERATIVA (DESTAQUE PRINCIPAL) -->
-        <section class="block-section cooperativa-main-block">
-            <div class="block-header">
-                <h3><i class="fa-solid fa-seedling color-cooperativa"></i> 🌱 CooperCastelo</h3>
-                <p>Nossa cooperativa oficial, orgulho da nossa escola! Aqui, <strong>100% dos alunos do Ensino Médio (do 9º ao 3º ano)</strong> são membros e cooperados ativos.</p>
+        <!-- BLOCO 2: DESTAQUE COOPERCASTELO -->
+        <section class="bloco-info">
+            <div class="bloco-header verde">
+                <span class="etiqueta">Empreendedorismo Social</span>
+                <h2><i class="fa-solid fa-handshake"></i> CooperCastelo: Nossa Própria Cooperativa</h2>
+                <p>Muito mais que teoria! Do 9º ao 3º ano do Ensino Médio, 100% dos nossos alunos são membros cooperados e gerenciam um negócio real sustentável.</p>
             </div>
             
-            <div class="grid">
-                <div class="card card-sabao">
-                    <div class="card-icon"><i class="fa-solid fa-soap"></i></div>
-                    <h4>🧼 Produção de Sabão</h4>
-                    <p>Fabricamos sabão artesanal sustentável. Reutilizamos óleos e materiais, protegendo o meio ambiente e aplicando conceitos de química na prática.</p>
+            <div class="cards-grid">
+                <div class="card-pratico border-verde">
+                    <div class="card-icon-wrapper cp-verde">
+                        <i class="fa-solid fa-soap"></i>
+                    </div>
+                    <h3>Produção de Sabão</h3>
+                    <p>Aplicamos conceitos de química e consciência ecológica na fabricação de sabão artesanal através do reaproveitamento de óleos residuais.</p>
                 </div>
-                <div class="card card-vendas">
-                    <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
-                    <h4>💼 Comercialização</h4>
-                    <p>Organizamos os pontos de venda e administramos os lucros de forma justa, aprendendo finanças, liderança e negócios reais.</p>
+
+                <div class="card-pratico border-ouro">
+                    <div class="card-icon-wrapper cp-ouro">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Gestão & Vendas</h3>
+                    <p>Administramos o fluxo de caixa, precificação, marketing e vendas. Todo o recurso é gerenciado democraticamente pelos próprios alunos.</p>
                 </div>
             </div>
         </section>
 
-        <!-- BLOCO 3: CRONOGRAMA DE ATIVIDADES SEMANAIS -->
-        <section class="block-section schedule-block">
-            <div class="block-header">
-                <h3><i class="fa-solid fa-calendar-days color-terca"></i> 📅 Atividades Semanais</h3>
-                <p>Veja como dividimos nossa rotina prática e dinâmica durante as tardes da semana:</p>
+        <!-- BLOCO 3: CRONOGRAMA SEMANAL POR ABAS -->
+        <section class="bloco-info">
+            <div class="bloco-header azul">
+                <span class="etiqueta">Calendário Prático</span>
+                <h2><i class="fa-solid fa-calendar-week"></i> Divisão de Atividades Semanais</h2>
+                <p>Nossas tardes são produtivas e organizadas por eixos temáticos focados no desenvolvimento integral.</p>
             </div>
 
-            <!-- Botões das Abas de Dias -->
-            <div class="tabs">
-                <button class="tab-btn btn-terca active" onclick="openTab(event, 'terca')">
-                    <i class="fa-solid fa-calendar-day"></i> Terça-Feira: Grupos Rotativos
+            <!-- Navegação por Blocos das Abas -->
+            <div class="abas-navegacao">
+                <button class="aba-item active" onclick="trocarAba(event, 'aba-terca')">
+                    <i class="fa-solid fa-basketball"></i> Terça-Feira: Grupos Rotativos
                 </button>
-                <button class="tab-btn btn-quinta" onclick="openTab(event, 'quinta')">
-                    <i class="fa-solid fa-calendar-check"></i> Quinta-Feira: Dia de Gestão
+                <button class="aba-item" onclick="trocarAba(event, 'aba-quinta')">
+                    <i class="fa-solid fa-users-gear"></i> Quinta-Feira: Dia Cooperativo
                 </button>
             </div>
 
-            <!-- Conteúdo de Terça -->
-            <div id="terca" class="tab-content active border-terca">
-                <p class="tab-intro">Nas terças-feiras, os alunos dividem-se em <strong>dois grupos rotativos</strong> para aproveitar as oficinas:</p>
-                <div class="grid">
-                    <div class="card card-futsal">
-                        <div class="card-icon"><i class="fa-solid fa-soccer-ball"></i></div>
-                        <h4>⚽ Futsal</h4>
-                        <p>Prática esportiva focada na saúde, agilidade, respeito mútuo e forte trabalho em equipe na quadra esportiva.</p>
+            <!-- Conteúdos das Abas -->
+            <div id="aba-terca" class="aba-painel active">
+                <p class="painel-legenda"><i class="fa-solid fa-circle-info"></i> A turma divide-se em dois grupos fixos que alternam entre as oficinas de esporte e cultura:</p>
+                <div class="cards-grid">
+                    <div class="card-sub-pratico">
+                        <h4>⚽ Oficina de Futsal</h4>
+                        <p>Trabalha a coordenação motora, saúde física, estratégia e o espírito de equipe no esporte coletivo.</p>
                     </div>
-                    <div class="card card-cinema">
-                        <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                        <h4>🎬 Cinema</h4>
-                        <p>Exibição de filmes educativos, debates enriquecedores, ampliação de cultura e desenvolvimento do senso crítico.</p>
+                    <div class="card-sub-pratico">
+                        <h4>🎬 Oficina de Cinema</h4>
+                        <p>Sessões de cinema seguidas de debates analíticos, expandindo o repertório sociocultural e reflexivo.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Conteúdo de Quinta -->
-            <div id="quinta" class="tab-content border-quinta">
-                <div class="card card-quinta-full">
-                    <div class="card-icon"><i class="fa-solid fa-people-gear"></i></div>
-                    <h4>🤝 Dia de Cooperativismo na Prática</h4>
-                    <p>As quintas são reservadas exclusivamente para os trabalhos da <strong>CooperCastelo</strong>. É o momento de organizar reuniões, planejar as metas da cooperativa e colocar a mão na massa para fazer o projeto crescer.</p>
+            <div id="aba-quinta" class="aba-painel">
+                <div class="painel-destaque-quinta">
+                    <div class="pd-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                    <div>
+                        <h4>Mão na Massa com a CooperCastelo</h4>
+                        <p>As quintas-feiras pertencem ao ecossistema da nossa cooperativa escolar. Os alunos reúnem-se em assembleia, planejam metas, organizam os materiais e executam as etapas de fabricação e distribuição do sabão.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,7 +116,10 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p><i class="fa-solid fa-copyright"></i> 2026 <span>CooperCastelo</span> — C.E. do Campo Castelo Branco. Feito com orgulho pela nossa comunidade escolar.</p>
+        <div class="footer-content">
+            <p>&copy; 2026 CooperCastelo — Todos os direitos reservados.</p>
+            <p class="footer-sub">Colégio Estadual do Campo Castelo Branco — Ensino Médio Integral de Campo</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
