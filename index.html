@@ -1,127 +1,297 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tempo Integral - C.E. do Campo Castelo Branco</title>
-    <!-- Ícones e Fontes Digitais -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ==========================================================================
+   Configurações Globais e Variáveis de Cores
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-    <!-- CAPA PRINCIPAL (Design de Natureza e Campo) -->
-    <header class="main-capa">
-        <div class="capa-grid">
-            <div class="capa-textos">
-                <span class="badge-integral"><i class="fa-solid fa-clock"></i> Ensino Médio em Tempo Integral</span>
-                <h1>Colégio Estadual do Campo Castelo Branco</h1>
-                <p class="subtitulo">Formando jovens cooperados, autônomos e preparados para o futuro da nossa comunidade.</p>
-                
-                <!-- Bloco de Localização Oficial Integrado na Capa -->
-                <div class="location-box">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <div>
-                        <strong>Endereço Oficial:</strong>
-                        <span>Rua Prefeito Frederico Berger, S/N — Distrito de Vista Alegre</span>
-                        <small>Coronel Vivida - PR | CEP 85550-000 (Zona Rural)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --text-light: #64748b;
+    --white: #ffffff;
+    
+    /* Cores Temáticas das Abas */
+    --cor-terca: #3b82f6;       /* Azul Esporte/Cultura */
+    --cor-quinta: #eab308;      /* Amarelo Liderança/Ideias */
+    --cor-cooperativa: #22c55e; /* Verde Sustentabilidade */
+    
+    --radius: 16px;
+    --transition: all 0.3s ease;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
 
-    <main class="main-container">
-        
-        <!-- BLOCO 1: SOBRE O TEMPO INTEGRAL -->
-        <section class="bloco-info">
-            <div class="bloco-card-intro">
-                <h2><i class="fa-solid fa-graduation-cap"></i> A Força do Ensino Integral</h2>
-                <p>Nossa proposta pedagógica expande os limites da sala de aula tradicional. Aliamos o conhecimento científico a oficinas práticas que desenvolvem a cultura, a saúde, o pensamento crítico e o empreendedorismo social diretamente no campo.</p>
-            </div>
-        </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- BLOCO 2: DESTAQUE COOPERCASTELO -->
-        <section class="bloco-info">
-            <div class="bloco-header verde">
-                <span class="etiqueta">Empreendedorismo Social</span>
-                <h2><i class="fa-solid fa-handshake"></i> CooperCastelo: Nossa Própria Cooperativa</h2>
-                <p>Muito mais que teoria! Do 9º ao 3º ano do Ensino Médio, 100% dos nossos alunos são membros cooperados e gerenciam um negócio real sustentável.</p>
-            </div>
-            
-            <div class="cards-grid">
-                <div class="card-pratico border-verde">
-                    <div class="card-icon-wrapper cp-verde">
-                        <i class="fa-solid fa-soap"></i>
-                    </div>
-                    <h3>Produção de Sabão</h3>
-                    <p>Aplicamos conceitos de química e consciência ecológica na fabricação de sabão artesanal através do reaproveitamento de óleos residuais.</p>
-                </div>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-                <div class="card-pratico border-ouro">
-                    <div class="card-icon-wrapper cp-ouro">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3>Gestão & Vendas</h3>
-                    <p>Administramos o fluxo de caixa, precificação, marketing e vendas. Todo o recurso é gerenciado democraticamente pelos próprios alunos.</p>
-                </div>
-            </div>
-        </section>
+/* ==========================================================================
+   Header / Cabeçalho (Com efeito Moderno de Vidro)
+   ========================================================================== */
+header {
+    position: relative;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+}
 
-        <!-- BLOCO 3: CRONOGRAMA SEMANAL POR ABAS -->
-        <section class="bloco-info">
-            <div class="bloco-header azul">
-                <span class="etiqueta">Calendário Prático</span>
-                <h2><i class="fa-solid fa-calendar-week"></i> Divisão de Atividades Semanais</h2>
-                <p>Nossas tardes são produtivas e organizadas por eixos temáticos focados no desenvolvimento integral.</p>
-            </div>
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-            <!-- Navegação por Blocos das Abas -->
-            <div class="abas-navegacao">
-                <button class="aba-item active" onclick="trocarAba(event, 'aba-terca')">
-                    <i class="fa-solid fa-basketball"></i> Terça-Feira: Grupos Rotativos
-                </button>
-                <button class="aba-item" onclick="trocarAba(event, 'aba-quinta')">
-                    <i class="fa-solid fa-users-gear"></i> Quinta-Feira: Dia Cooperativo
-                </button>
-            </div>
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
 
-            <!-- Conteúdos das Abas -->
-            <div id="aba-terca" class="aba-painel active">
-                <p class="painel-legenda"><i class="fa-solid fa-circle-info"></i> A turma divide-se em dois grupos fixos que alternam entre as oficinas de esporte e cultura:</p>
-                <div class="cards-grid">
-                    <div class="card-sub-pratico">
-                        <h4>⚽ Oficina de Futsal</h4>
-                        <p>Trabalha a coordenação motora, saúde física, estratégia e o espírito de equipe no esporte coletivo.</p>
-                    </div>
-                    <div class="card-sub-pratico">
-                        <h4>🎬 Oficina de Cinema</h4>
-                        <p>Sessões de cinema seguidas de debates analíticos, expandindo o repertório sociocultural e reflexivo.</p>
-                    </div>
-                </div>
-            </div>
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
 
-            <div id="aba-quinta" class="aba-painel">
-                <div class="painel-destaque-quinta">
-                    <div class="pd-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
-                    <div>
-                        <h4>Mão na Massa com a CooperCastelo</h4>
-                        <p>As quintas-feiras pertencem ao ecossistema da nossa cooperativa escolar. Os alunos reúnem-se em assembleia, planejam metas, organizam os materiais e executam as etapas de fabricação e distribuição do sabão.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-    </main>
+/* ==========================================================================
+   Layout Principal e Introdução
+   ========================================================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-    <!-- RODAPÉ -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 CooperCastelo — Todos os direitos reservados.</p>
-            <p class="footer-sub">Colégio Estadual do Campo Castelo Branco — Ensino Médio Integral de Campo</p>
-        </div>
-    </footer>
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.intro h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Botões de Navegação (Tabs)
+   ========================================================================== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    border: none;
+    padding: 14px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--text-light);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+/* Cores ativas personalizadas para cada botão */
+.tab-btn.btn-terca.active {
+    background-color: var(--cor-terca);
+    color: var(--white);
+}
+
+.tab-btn.btn-quinta.active {
+    background-color: var(--cor-quinta);
+    color: #713f12; /* Texto escuro para contraste no amarelo */
+}
+
+.tab-btn.btn-cooperativa.active {
+    background-color: var(--cor-cooperativa);
+    color: var(--white);
+}
+
+.tab-btn:hover:not(.active) {
+    transform: translateY(-3px);
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   Conteúdo das Abas e Sistema de Exibição
+   ========================================================================== */
+.tab-content {
+    display: none; /* Escondido por padrão */
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 6px solid transparent;
+    animation: fadeIn 0.5s ease ease-in-out forwards;
+}
+
+/* Mostra apenas a aba ativa */
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cores das bordas superiores de cada aba */
+.border-terca { border-top-color: var(--cor-terca); }
+.border-quinta { border-top-color: var(--cor-quinta); }
+.border-cooperativa { border-top-color: var(--cor-cooperativa); }
+
+.content-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.content-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content-header p {
+    color: var(--text-light);
+}
+
+/* Classes utilitárias de cores de texto */
+.color-terca { color: var(--cor-terca); }
+.color-quinta { color: var(--cor-quinta); }
+.color-cooperativa { color: var(--cor-cooperativa); }
+
+/* ==========================================================================
+   Grid e Cartões (Cards)
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Estilos de ícones e hover baseados nas cores da escola */
+.card-futsal .card-icon { color: var(--cor-terca); }
+.card-futsal:hover { border-bottom: 4px solid var(--cor-terca); }
+
+.card-cinema .card-icon { color: #a855f7; }
+.card-cinema:hover { border-bottom: 4px solid #a855f7; }
+
+.card-quinta-full {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.card-quinta-full .card-icon { color: var(--cor-quinta); }
+.card-quinta-full:hover { border-bottom: 4px solid var(--cor-quinta); }
+
+.card-sabao .card-icon { color: #06b6d4; }
+.card-sabao:hover { border-bottom: 4px solid #06b6d4; }
+
+.card-vendas .card-icon { color: var(--cor-cooperativa); }
+.card-vendas:hover { border-bottom: 4px solid var(--cor-cooperativa); }
+
+.card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Footer / Rodapé
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+footer span {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsividade para Celulares
+   ========================================================================== */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .tab-content { padding: 25px 15px; }
+    .tabs { flex-direction: column; width: 100%; }
+    .tab-btn { width: 100%; justify-content: center; }
+}
